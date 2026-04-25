@@ -1,0 +1,25 @@
+{
+    "name": "C# (.NET 10.0) and Samba",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dotnet",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "features": {
+        "ghcr.io/devcontainers/features/dotnet:2": {
+            "version": "10.0"
+        },
+        "ghcr.io/devcontainers/features/powershell:2": {
+            "version": "7.6"
+        }
+    },
+    "postCreateCommand": "dotnet restore",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "ms-vscode.powershell",
+                "davidanson.vscode-markdownlint"
+            ]
+        }
+    }
+}
